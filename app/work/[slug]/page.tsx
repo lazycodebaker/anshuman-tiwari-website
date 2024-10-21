@@ -1,6 +1,7 @@
 import { montrealBook, montrealMedium } from "@/app/font"
 import ClampText from "@/components/Animation/ClampText"
 import Parallax from "@/components/Animation/Parallax"
+import Underline from "@/components/Animation/UnderlineText"
 import { color, font } from "@/constants"
 import Link from "next/link"
 import { FaGithub } from "react-icons/fa"
@@ -20,10 +21,13 @@ export default async function Work({ params }: { params: { slug: string } }) {
         <>
             <Link href="/" style={{
                 color: color.WHITE,
-                fontSize: font.size.XS
+                fontSize: font.size.XS,
+                zIndex : 1000
             }} className="fixed left-4 top-12 flex items-center gap-2">
-                <HiArrowLongLeft className="text-2xl"/>
-                <span>BACK</span>
+                <HiArrowLongLeft className="text-2xl" />
+                <Underline isBgDark={true}>
+                    BACK
+                </Underline>
             </Link>
             <Parallax style={{
                 backgroundColor: color.BLACK,

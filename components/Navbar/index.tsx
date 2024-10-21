@@ -39,13 +39,13 @@ export default function Navbar() {
         </Link >
         <ul className="flex items-center gap-1 justify-center">
             <Link href="/info">
-                <Underline>
+                <Underline isBgDark={isPageDark}>
                     info
                 </Underline>
                 <span> ,</span>
             </Link>
             <Link href="/contact">
-                <Underline>
+                <Underline isBgDark={isPageDark}>
                     contact
                 </Underline>
             </Link>

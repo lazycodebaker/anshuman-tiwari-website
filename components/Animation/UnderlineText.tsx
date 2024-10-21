@@ -8,7 +8,7 @@ import { cubicBezier } from 'framer-motion';
 import dynamic from "next/dynamic"
 const MotionDiv = dynamic(() => import('framer-motion').then(mod => mod.motion.div), { ssr: false })
 
-export default function Underline({ children }: { children: React.ReactNode }) {
+export default function Underline({ children, isBgDark }: { children: React.ReactNode, isBgDark?: boolean }) {
     const [hovered, setHovered] = useState<boolean>(false)
 
     return (
@@ -31,7 +31,7 @@ export default function Underline({ children }: { children: React.ReactNode }) {
                     delay: 0.1
                 }}
                 style={{
-                    backgroundColor: color.BLACK,
+                    backgroundColor: isBgDark ? color.WHITE : color.BLACK,
                     originX: 1
                 }}
                 className='absolute bottom-0 left-0 w-full h-[1.5px]'
@@ -48,7 +48,7 @@ export default function Underline({ children }: { children: React.ReactNode }) {
                     ease: cubicBezier(0.83, 0, 0.17, 1),
                 }}
                 style={{
-                    backgroundColor: color.BLACK,
+                    backgroundColor: isBgDark ? color.WHITE : color.BLACK,
                     originX: 0
                 }}
                 className='absolute bottom-0 left-0 w-full h-[1.5px]'
