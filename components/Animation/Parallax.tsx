@@ -1,17 +1,18 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { CSSProperties, useEffect, useRef } from "react"
 import { useWindowSize } from "@studio-freight/hamo"
 
 type WindowSize = {
     width: number
 }
 
-export default function Parallax({ className, children, speed = 1, id = "parallax" }: {
+export default function Parallax({ className, children, speed = 1, id = "parallax" , style }: {
     className?: string
     children: React.ReactNode
     speed?: number
-    id?: string
+    id?: string,
+    style? : CSSProperties
 }) {
     const trigger = useRef<HTMLDivElement>(null)
     const target = useRef<HTMLDivElement>(null)
@@ -51,8 +52,8 @@ export default function Parallax({ className, children, speed = 1, id = "paralla
     }, [id, speed, windowWidth])
 
     return (
-        <div ref={trigger} className={className}>
-            <div ref={target}>{children}</div>
+        <div style={style} ref={trigger} className={className}>
+            <div  ref={target}>{children}</div>
         </div>
     )
 }

@@ -15,8 +15,12 @@ export default function Navbar() {
 
     const [isPageDark, setIsPageDark] = useState<boolean>(false)
 
+    const darkPages = ["info", "work"]
+
+    console.log(route);
+
     useEffect(() => {
-        if (route === "info") {
+        if (darkPages.find(page => page === route)){
             setIsPageDark(true)
         } else {
             setIsPageDark(false)

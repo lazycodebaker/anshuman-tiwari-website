@@ -3,26 +3,35 @@ import { color, font } from "@/constants";
 import Link from "next/link";
 import { montrealThin } from "../font";
 
+import MY_IMAGE_BW from "@/assets/my_image_bw.png"
+import Image from "next/image";
+import { MdArrowOutward } from "react-icons/md";
+
 export default function Contact() {
     return (
         <main style={{
             backgroundColor: color.WHITE
-        }} className="h-screen flex flex-col px-4">
+        }} className="h-screen w-full grid grid-cols-1 lg:grid-cols-2 px-4">
+
             <div className="flex flex-col justify-around h-full">
                 <div>
-                    <h1 className="text-7xl md:text-9xl mb-4 text-left font-serif">Contact</h1>
-                    <Link href="mailto:lazycodebaker@icloud" className="text-4xl md:text-5xl mb-10 text-left">
+                    <h1 className="text-6xl lg:text-8xl mb-4 text-left font-serif">Contact Me</h1>
+                    <Link href="mailto:lazycodebaker@icloud" className="text-3xl flex items-center gap-4 lg:text-4xl mb-10 text-left">
                         <Underline key={"email"}>
                             lazycodebaker@icloud.com
                         </Underline>
+
+                        <MdArrowOutward style={{
+                            color: color.BLACK
+                        }} />
                     </Link>
                 </div>
-                <div className="flex w-full md:items-center items-start justify-between md:flex-row flex-col">
-                    <p className="text-5xl md:text-[5.25rem] text-left">Anshuman Tiwari</p>
+                <div className="flex w-full gap-8 items-start justify-start flex-col">
+                    <p className="text-4xl md:text-[4.75rem] text-left font-serif">Anshuman Tiwari</p>
 
                     <ul style={{
-                        fontSize: font.size.XXS
-                    }} className={`flex items-center font-semibold gap-1 uppercase justify-center ${montrealThin.className}`}>
+                        fontSize: font.size.XS
+                    }} className={`flex items-center font-semibold gap-1 uppercase ${montrealThin.className}`}>
                         <Link href="">
                             <Underline key={"github"}>
                                 Github
@@ -33,6 +42,7 @@ export default function Contact() {
                             <Underline key={"linkedin"}>
                                 Linkedin
                             </Underline>
+                            <span> ,</span>
                         </Link>
                         <Link href="">
                             <Underline key={"twitter"}>
@@ -43,16 +53,9 @@ export default function Contact() {
                 </div>
             </div>
 
-            <footer className="w-full mb-3">
-                <div style={{
-                    borderColor: color.BLACK
-                }} className="border-t w-full mb-3"></div>
-                <div style={{
-                    fontSize: font.size.XS
-                }} className="flex justify-center items-center text-gray-500">
-                    <p className="text-center">© 2024 Anshuman Tiwari</p>
-                </div>
-            </footer>
+            <div className="lg:flex hidden items-center justify-center">
+                <Image src={MY_IMAGE_BW} alt="Anshuman Tiwari Photo" />
+            </div>
         </main>
     )
 }
