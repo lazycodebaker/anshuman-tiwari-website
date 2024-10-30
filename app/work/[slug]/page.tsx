@@ -1,17 +1,19 @@
+import { allDocs } from "@/.contentlayer/generated"
 import { montrealBook, montrealMedium } from "@/app/font"
 import ClampText from "@/components/Animation/ClampText"
 import Parallax from "@/components/Animation/Parallax"
 import Underline from "@/components/Animation/UnderlineText"
+import { Mdx } from "@/components/MDX"
 import { color, font } from "@/constants"
 import Link from "next/link"
+import { notFound } from "next/navigation"
 import { FaGithub } from "react-icons/fa"
 import { HiArrowLongLeft } from "react-icons/hi2"
 
-
 async function getDocFromParams(slug: string) {
-    return {
-        slug: slug
-    }
+    const doc = allDocs.find(doc => doc.slugAsParams === slug)
+    if (!doc) return notFound()
+    return doc
 }
 
 export default async function Work({ params }: { params: { slug: string } }) {
@@ -22,7 +24,7 @@ export default async function Work({ params }: { params: { slug: string } }) {
             <Link href="/" style={{
                 color: color.WHITE,
                 fontSize: font.size.XS,
-                zIndex : 1000
+                zIndex: 1000
             }} className="fixed left-4 top-12 flex items-center gap-2">
                 <HiArrowLongLeft className="text-2xl" />
                 <Underline isBgDark={true}>
@@ -38,15 +40,13 @@ export default async function Work({ params }: { params: { slug: string } }) {
                     <div className={`flex items-center justify-center pb-36 h-screen flex-col text-center ${montrealMedium.className}`}>
                         <div className="flex flex-col gap-2">
                             <ClampText key="title" min={"2.12rem"} max={"4rem"}>
-                                title :: {doc.slug}
+                                {doc.title}
                             </ClampText>
                             <ClampText key="description" min={"0.8rem"} max={"1rem"} className="text-gray-400">
-                                description
+                                {doc.description}
                             </ClampText>
-                            <p className="text-gray-400 mt-2">
+                            <p className={`text-sm text-gray-500 ${montrealBook.className}`}>{new Date(doc.publishedOn).toUTCString().slice(0, 16)}</p>
 
-                            </p>
-                            <p className={`text-sm text-gray-500 ${montrealBook.className}`}>{new Date(Date.now()).toUTCString().slice(0, 16)}</p>
                         </div>
 
                         <Link
@@ -81,7 +81,7 @@ export default async function Work({ params }: { params: { slug: string } }) {
                     <hr className="my-8 border-gray-600" />
 
                     <div className={`max-w-3xl ${montrealMedium.className}`}>
-
+                        <Mdx code={doc.body.code} />
                     </div>
                 </div>
             </Parallax>

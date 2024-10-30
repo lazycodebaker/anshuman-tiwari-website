@@ -16,3 +16,4 @@ export const font = {
     }
 }
 
+export const aboutMe= "Hi, Im m Anshuman Tiwari. A student in the field of Machine Learning and Artificial Intelligence, with additional skills as a Full-Stack developer. Over the past two years, I have had the privilege of collaborating closely with exceptional individuals and teams, gaining valuable experience and insights. My passion lies in continuous learning and exploring diverse fields to broaden my knowledge and skills."

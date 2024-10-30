@@ -6,8 +6,9 @@ import { color, font } from "@/constants"
 import Parallax from "@/components/Animation/Parallax"
 import WorkList from "@/components/Work/List"
 
+
 const works = [
-  { date: "2024.10.13", title: 'Mens op houten stoel', desc: 'Tilt' },
+  { date: "2024.11.29", title: 'sfsssf', desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. At harum reiciendis voluptas fugiat possimus dignissimos veniam dolore! Ex sunt, id ut beatae quaerat fugit distinctio autem! Ratione fugit iste minima." },
   { date: "2024.10.13", title: 'Niets is wat het lijkt', desc: 'De Gids' },
   { date: "2024.10.13", title: 'Schubben', desc: 'De Gids' },
   { date: "2024.10.13", title: 'Tunnels graven', desc: 'Papieren Helden' },

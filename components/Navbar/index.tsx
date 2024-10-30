@@ -6,7 +6,7 @@ import { color, font } from "@/constants"
 import FlipText from "../Animation/FlipText"
 import Underline from "../Animation/UnderlineText"
 import { usePathname } from "next/navigation"
-import { useEffect, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 
 export default function Navbar() {
 
@@ -15,7 +15,7 @@ export default function Navbar() {
 
     const [isPageDark, setIsPageDark] = useState<boolean>(false)
 
-    const darkPages = ["info", "work"]
+    const darkPages = useMemo(() => ["info", "work"], [])
 
     console.log(route);
 
@@ -25,13 +25,13 @@ export default function Navbar() {
         } else {
             setIsPageDark(false)
         }
-    }, [route])
+    }, [route,darkPages])
 
     return <nav style={{
         color: isPageDark ? color.WHITE : color.BLACK,
         fontSize: font.size.XXS,
         backgroundColor: "transparent",
-        zIndex: "1000"
+        zIndex: 100
     }}
         className={`h-12 flex w-screen fixed top-0 left-0 uppercase font-semibold items-center justify-between px-4 ${montrealThin.className}`}>
         <Link href='/'>
