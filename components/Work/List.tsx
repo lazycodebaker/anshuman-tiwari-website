@@ -18,7 +18,7 @@ export default function WorkList({ work, index }: {
     return (
         <motion.li
             key={index}
-            onClick={() => navigate.push(`/work/${index}`)}
+            onClick={() => navigate.push(`/work/${work?.title}`)}
             style={{
                 borderColor: color.BLACK,
                 backgroundColor: isHovered ? 'white' : 'transparent',
