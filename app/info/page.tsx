@@ -34,8 +34,7 @@ export default function Info() {
             <Parallax id="info-text" speed={1} key={"info-text"}>
 
                 <section className='flex lg:flex-row flex-col gap-4'>
-                    <div style={{
-                        // backgroundColor: color.BLACK,
+                    <div style={{ 
                         color: color.WHITE
                     }} className='w-full md:col-span-1 flex items-center justify-start'>
                         <Image src={MY_IMAGE_BW} alt="Anshuman Tiwari" className="w-full h-full" />
@@ -44,16 +43,19 @@ export default function Info() {
                     <div style={{
                         color: color.WHITE,
                         fontSize: font.size.SM
-                    }} className={`flex text-white md:col-span-2 items-start justify-center flex-col tracking-wide md:px-8 px-0 uppercase md:my-0 my-4 font-semibold ${montrealThin.className}`}>
-                        <p>
-                            IN 2019, I ENROLLED IN COLLEGE.
-                        </p>
-                        <p>
-                            I WASN&#39;T ABLE TO SURE WHAT I WANTED TO DO WITH MY LIFE. INITIALLY, I THOUGHT MY PROFESSION WOULD BE RELATED TO THE RAILWAY INDUSTRY. AND BEFORE DELVING INTO THE WORLD OF WEB DEVELOPMENT AND DESIGN, I ALSO WORKED AS A WAITER.  <br /> <br />
-                        </p>
-                        <p>
-                            AS A JUNIOR WEB DEVELOPER I REALIZED THAT I ENJOYED THE CREATIVE ASPECT OF MY WORK MORE, AND I MADE A FULL TRANSITION INTO THE FIELD OF DESIGN. SINCE THEN, I HAVE WORKED AS A FREELANCER ON PLATFORMS LIKE UPWORK AND COLLABORATED WITH COMPANIES AND CLIENTS ON A FULL-TIME OR CONTRACT BASIS. I’VE WORKED WITH PROMINENT COMPANIES AND CLIENTS.
-                        </p>
+                    }} className={`flex text-white md:col-span-2 tracking-wider items-start justify-center flex-col md:px-8 px-0 uppercase md:my-0 my-4 font-semibold ${montrealThin.className}`}>
+                        <>
+                            From an early age, I was fascinated by technology, though I wasn&apos;t sure where it would lead me.
+                            <div className="my-[1px]" />
+                            My curiosity deepened in school as I learned about computers—how they worked, played games, and even operated independently.
+                            <div className="my-[1px]" />
+                            This spark grew when I discovered robotics and AI. To build on this passion, I pursued a Bachelor&apos; degree, which gave me practical insights and hands-on experience.
+                            <div className="my-[1px]" />
+                            Working with two amazing companies broadened my skills and perspective, helping me realize the impact technology can have.
+                            Now, as I dive deeper into AI, particularly its applications in neuroscience and human-computer interfaces.
+                            <div className="my-2" />
+                            I have a clear vision of my path. I know what I want to achieve and am excited to pursue it with purpose.
+                        </>
                     </div>
 
                 </section>
@@ -64,7 +66,7 @@ export default function Info() {
 
             <Link style={{
                 color: color.WHITE,
-            }} href="mailto:lazycodebaker@icloud" className="text-4xl flex items-center gap-4 lg:text-5xl mb-10 text-left">
+            }} href="mailto:lazycodebaker@icloud" className="text-3xl flex items-center gap-4 lg:text-4xl mb-4 text-left">
                 <Underline key={"email"} isBgDark={true}>
                     lazycodebaker@icloud.com
                 </Underline>

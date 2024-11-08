@@ -20,12 +20,12 @@ export default function Navbar() {
     console.log(route);
 
     useEffect(() => {
-        if (darkPages.find(page => page === route)){
+        if (darkPages.find(page => page === route)) {
             setIsPageDark(true)
         } else {
             setIsPageDark(false)
         }
-    }, [route,darkPages])
+    }, [route, darkPages])
 
     return <nav style={{
         color: isPageDark ? color.WHITE : color.BLACK,

@@ -5,7 +5,7 @@ import { montrealMedium } from "./font"
 import { color, font } from "@/constants"
 import Parallax from "@/components/Animation/Parallax"
 import WorkList from "@/components/Work/List"
-
+import FlipText from "@/components/Animation/FlipText"
 
 const works = [
   { date: "2024.11.29", title: 'sfsssf', desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. At harum reiciendis voluptas fugiat possimus dignissimos veniam dolore! Ex sunt, id ut beatae quaerat fugit distinctio autem! Ratione fugit iste minima." },
@@ -110,10 +110,12 @@ export default function Home() {
           <h1 style={{
             color: color.BLACK,
             fontSize: font.size.XL
-          }} className={`uppercase ${montrealMedium.className}`}>Works</h1>
+          }} className={`uppercase ${montrealMedium.className}`}>
+            <FlipText>WORKS</FlipText>
+          </h1>
           <div style={{
             backgroundColor: color.BLACK
-          }} className="w-full h-[1.5px] relative" />
+          }} className="w-full mt-2 h-[1.5px] relative" />
         </section>
       </Parallax>
 
