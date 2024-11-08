@@ -32,23 +32,17 @@ export default function Contact() {
                     <ul style={{
                         fontSize: font.size.XS
                     }} className={`flex items-center font-semibold gap-1 uppercase ${montrealThin.className}`}>
-                        <Link href="">
+                        <Link href="https://github.com/lazycodebaker">
                             <Underline key={"github"}>
                                 Github
                             </Underline>
                             <span> ,</span>
                         </Link>
-                        <Link href="">
+                        <Link href="https://www.linkedin.com/in/lazycodebakerat/">
                             <Underline key={"linkedin"}>
                                 Linkedin
-                            </Underline>
-                            <span> ,</span>
-                        </Link>
-                        <Link href="">
-                            <Underline key={"twitter"}>
-                                X (Twitter)
-                            </Underline>
-                        </Link>
+                            </Underline> 
+                        </Link> 
                     </ul>
                 </div>
             </div>
