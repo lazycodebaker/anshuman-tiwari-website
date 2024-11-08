@@ -16,9 +16,9 @@ export default function Contact() {
             <div className="flex flex-col justify-around h-full">
                 <div>
                     <h1 className="text-6xl lg:text-8xl mb-4 text-left font-serif">Contact Me</h1>
-                    <Link href="mailto:lazycodebaker@icloud" className="text-3xl flex items-center gap-4 lg:text-4xl mb-10 text-left">
+                    <Link href="mailto:anshuman.tiwari.de@gmail.com" className="text-3xl flex items-center gap-4 lg:text-4xl mb-10 text-left">
                         <Underline key={"email"}>
-                            lazycodebaker@icloud.com
+                            anshuman.tiwari.de@gmail.com
                         </Underline>
 
                         <MdArrowOutward style={{

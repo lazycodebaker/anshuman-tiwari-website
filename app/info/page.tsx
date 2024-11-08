@@ -66,9 +66,9 @@ export default function Info() {
 
             <Link style={{
                 color: color.WHITE,
-            }} href="mailto:lazycodebaker@icloud" className="text-3xl flex items-center gap-4 lg:text-4xl mb-4 text-left">
+            }} href="mailto:anshuman.tiwari.de@gmail.com" className="text-3xl flex items-center gap-4 lg:text-4xl mb-4 text-left">
                 <Underline key={"email"} isBgDark={true}>
-                    lazycodebaker@icloud.com
+                    anshuman.tiwari.de@gmail.com
                 </Underline>
 
                 <MdArrowOutward />
