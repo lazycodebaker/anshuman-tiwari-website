@@ -66,7 +66,7 @@ export default function Info() {
 
             <Link style={{
                 color: color.WHITE,
-            }} href="mailto:anshuman.tiwari.de@gmail.com" className="text-3xl flex items-center gap-4 lg:text-4xl mb-4 text-left">
+            }} href="mailto:anshuman.tiwari.de@gmail.com" className="text-2xl flex items-center gap-4 lg:text-3xl mb-4 text-left">
                 <Underline key={"email"} isBgDark={true}>
                     anshuman.tiwari.de@gmail.com
                 </Underline>
