@@ -4,9 +4,10 @@
 import { montrealMedium } from "./font"
 import { color, font } from "@/constants"
 import Parallax from "@/components/Animation/Parallax"
-import WorkList from "@/components/Work/List"
+// import WorkList from "@/components/Work/List"
 import FlipText from "@/components/Animation/FlipText"
 
+/*
 const works = [
   { date: "2024.11.29", title: 'sfsssf', desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. At harum reiciendis voluptas fugiat possimus dignissimos veniam dolore! Ex sunt, id ut beatae quaerat fugit distinctio autem! Ratione fugit iste minima." },
   { date: "2024.10.13", title: 'Niets is wat het lijkt', desc: 'De Gids' },
@@ -99,6 +100,7 @@ const works = [
   { date: "2024.10.13", title: 'City Lights', desc: 'Extra Extra magazine' },
   { date: "2024.10.13", title: 'Zwemmer', desc: 'Papieren Helden' },
 ]
+*/
 
 export default function Home() {
   return (
@@ -127,6 +129,23 @@ export default function Home() {
             backgroundColor: color.WHITE
           }} className="w-full">
             <ul className="w-full">
+             <p>Works Will be Added Soon Here , For Now please head to my github page to see my works... </p>
+             <p>Sorry for the inconvenience</p>
+             
+            </ul>
+          </div>
+        </div>
+      </Parallax>
+
+      {/*
+      <Parallax style={{
+        backgroundColor: color.WHITE
+      }} id="info" speed={4} key={"info"} className="min-h-screen">
+        <div className="flex justify-center items-center w-full h-full">
+          <div style={{
+            backgroundColor: color.WHITE
+          }} className="w-full">
+            <ul className="w-full">
               {works.map((work, index) => (
                 <WorkList key={index} work={work} index={index} />
               ))}
@@ -134,6 +153,7 @@ export default function Home() {
           </div>
         </div>
       </Parallax>
+      */}
 
     </main>
   )
