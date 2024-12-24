@@ -1,23 +1,18 @@
-import { allDocs } from "@/.contentlayer/generated"
+import { Doc } from "@/.contentlayer/generated"
 import { montrealBook, montrealMedium } from "@/app/font"
 import ClampText from "@/components/Animation/ClampText"
 import Parallax from "@/components/Animation/Parallax"
 import Underline from "@/components/Animation/UnderlineText"
 import { Mdx } from "@/components/MDX"
 import { color, font } from "@/constants"
+import { getDocFromParams } from "@/lib/docs"
 import Link from "next/link"
-import { notFound } from "next/navigation"
 import { FaGithub } from "react-icons/fa"
 import { HiArrowLongLeft } from "react-icons/hi2"
 
-async function getDocFromParams(slug: string) {
-    const doc = allDocs.find(doc => doc.slugAsParams === slug)
-    if (!doc) return notFound()
-    return doc
-}
 
 export default async function Work({ params }: { params: { slug: string } }) {
-    const doc = await getDocFromParams(params.slug)
+    const doc: Doc = await getDocFromParams(params.slug)
 
     return (
         <>
@@ -34,7 +29,7 @@ export default async function Work({ params }: { params: { slug: string } }) {
             <Parallax style={{
                 backgroundColor: color.BLACK,
                 color: color.WHITE
-            }} className="min-h-screen p-4">
+            }} className="min-h-screen h-full p-4">
                 <div className="max-w-3xl mx-auto">
 
                     <div className={`flex items-center justify-center pb-36 h-screen flex-col text-center ${montrealMedium.className}`}>
@@ -80,11 +75,22 @@ export default async function Work({ params }: { params: { slug: string } }) {
 
                     <hr className="my-8 border-gray-600" />
 
-                    <div className={`max-w-3xl ${montrealMedium.className}`}>
+                    <div className={`max-w-3xl h-full ${montrealMedium.className}`}>
                         <Mdx code={doc.body.code} />
                     </div>
                 </div>
             </Parallax>
+            <div style={{
+                backgroundColor: color.BLACK,
+                color: color.WHITE,
+                fontSize: font.size.XS,
+            }} className="py-12 h-96 w-full flex items-end uppercase justify-center">
+                <Link href="/" className="transition">
+                    <Underline isBgDark={true}>
+                        Back to Home To Read More
+                    </Underline>
+                </Link>
+            </div>
         </>
     )
 }
