@@ -7,6 +7,7 @@ import Parallax from "@/components/Animation/Parallax";
 import WorkList from "@/components/Work/List";
 import FlipText from "@/components/Animation/FlipText";
 import { getAllDocsFormatted } from "@/lib/docs";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   const [works, setWorks] = useState<Array<{
@@ -16,6 +17,7 @@ export default function Home() {
     date: string;
   }>>([]);
   const [isLoading, setIsLoading] = useState(true);
+
 
   useEffect(() => {
     async function fetchWorks() {
@@ -31,34 +33,46 @@ export default function Home() {
     fetchWorks();
   }, []);
 
+  const router = useRouter();
+
   return (
     <main
       style={{
         backgroundColor: color.WHITE,
       }}
-      className="h-full w-full px-4"
+      className="h-screen w-full px-4"
     >
       <Parallax id="info" speed={1} key={"info"}>
         <section className="py-16">
-          <h1
+          <div
             style={{
               color: color.BLACK,
-              fontSize: font.size.XL,
+              fontSize: font.size.MD,
             }}
             className={`uppercase ${montrealMedium.className}`}
           >
-            <FlipText>WORKS</FlipText>
-          </h1>
-          <div
+            <h1 className="">
+              Please head to
+              <span onClick={() => {
+                router.push("/info");
+              }} className="cursor-pointer inline-block mx-2">
+                <FlipText> /info </FlipText>
+              </span>
+              <br /> <br />
+              I'm Working for this main page.
+            </h1>
+            {/* <FlipText>WORKS</FlipText> */}
+          </div>
+          {/* <div
             style={{
               backgroundColor: color.BLACK,
             }}
             className="w-full mt-2 h-[1.5px] relative"
-          />
+          /> */}
         </section>
       </Parallax>
 
-      <Parallax
+      {/* <Parallax
         style={{
           backgroundColor: color.WHITE,
         }}
@@ -91,7 +105,7 @@ export default function Home() {
             )}
           </div>
         </div>
-      </Parallax>
+      </Parallax> */}
     </main>
   );
 }

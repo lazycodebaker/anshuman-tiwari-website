@@ -2,7 +2,7 @@
 "use client"
 
 import '@mdxeditor/editor/style.css'
-import { headingsPlugin, listsPlugin, imagePlugin, linkDialogPlugin, quotePlugin, sandpackPlugin, thematicBreakPlugin, frontmatterPlugin, toolbarPlugin, codeBlockPlugin, codeMirrorPlugin } from '@mdxeditor/editor'
+import { headingsPlugin, listsPlugin, imagePlugin, linkDialogPlugin, quotePlugin, sandpackPlugin, thematicBreakPlugin, frontmatterPlugin, toolbarPlugin, tablePlugin, codeBlockPlugin, codeMirrorPlugin } from '@mdxeditor/editor'
 
 import matter from "gray-matter"
 import React, { useEffect, useState } from 'react'
@@ -45,14 +45,14 @@ export default function CreateMarkdown() {
                 <h1 className="text-3xl font-bold mb-6 text-gray-800">Create a New Post</h1>
 
                 <div style={{
-                    zIndex : "100000"
+                    zIndex: "100000"
                 }} className="space-y-4">
                     <p className="w-full flex text-center h-8 px-2 font-semibold text-md border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
                         {text.title ? text.title : "Post Title"}
                     </p>
 
                     <p className="w-full flex text-center h-8 px-2 font-semibold text-md border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
-                        {text.description ? text.description?.substring(0,100) + "..." : "Post Description"}
+                        {text.description ? text.description?.substring(0, 100) + "..." : "Post Description"}
                     </p>
 
                     <p className="w-full flex text-center h-8 px-2 font-semibold text-md border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
@@ -74,6 +74,7 @@ export default function CreateMarkdown() {
                             quotePlugin(),
                             thematicBreakPlugin(),
                             linkDialogPlugin(),
+                            tablePlugin(),
                             frontmatterPlugin(),
                             imagePlugin({
                                 imageUploadHandler: (image) => imageUploadHandler(image, text.title || "untitled"),
