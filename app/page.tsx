@@ -4,20 +4,20 @@ import { useEffect, useState } from "react";
 import { montrealMedium } from "./font";
 import { color, font } from "@/constants";
 import Parallax from "@/components/Animation/Parallax";
-import WorkList from "@/components/Work/List";
+// import WorkList from "@/components/Work/List";
 import FlipText from "@/components/Animation/FlipText";
 import { getAllDocsFormatted } from "@/lib/docs";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
-  const [works, setWorks] = useState<Array<{
+  const [, setWorks] = useState<Array<{
     title: string;
     slug: string;
     desc: string;
     date: string;
   }>>([]);
-  const [isLoading, setIsLoading] = useState(true);
 
+  const [, setIsLoading] = useState(true);
 
   useEffect(() => {
     async function fetchWorks() {
@@ -59,7 +59,7 @@ export default function Home() {
                 <FlipText> /info </FlipText>
               </span>
               <br /> <br />
-              I'm Working for this main page.
+              I&apos;m Working for this main page.
             </h1>
 
             <h1 className="">
