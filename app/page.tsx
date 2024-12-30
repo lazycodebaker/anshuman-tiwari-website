@@ -55,11 +55,22 @@ export default function Home() {
               Please head to
               <span onClick={() => {
                 router.push("/info");
-              }} className="cursor-pointer inline-block mx-2">
+              }} className="cursor-pointer font-semibold inline-block mx-2">
                 <FlipText> /info </FlipText>
               </span>
               <br /> <br />
               I'm Working for this main page.
+            </h1>
+
+            <h1 className="">
+              or Please head to
+              <span onClick={() => {
+                router.replace("https://github.com/lazycodebaker");
+              }} className="cursor-pointer font-semibold inline-block mx-2">
+                <FlipText> Github </FlipText>
+              </span>
+              for my Github account.
+              <br /> <br />
             </h1>
             {/* <FlipText>WORKS</FlipText> */}
           </div>

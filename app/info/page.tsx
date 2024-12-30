@@ -34,7 +34,7 @@ export default function Info() {
             <Parallax id="info-text" speed={1} key={"info-text"}>
 
                 <section className='flex lg:flex-row flex-col gap-4'>
-                    <div style={{ 
+                    <div style={{
                         color: color.WHITE
                     }} className='w-full md:col-span-1 flex items-center justify-start'>
                         <Image src={MY_IMAGE_BW} alt="Anshuman Tiwari" className="w-full h-full" />
@@ -42,7 +42,8 @@ export default function Info() {
 
                     <div style={{
                         color: color.WHITE,
-                        fontSize: font.size.SM
+                        fontSize: font.size.SM,
+                        lineHeight: 1.7
                     }} className={`flex text-white md:col-span-2 tracking-wider items-start justify-center flex-col md:px-8 px-0 uppercase md:my-0 my-4 font-semibold ${montrealThin.className}`}>
                         <>
                             From an early age, I was fascinated by technology, though I wasn&apos;t sure where it would lead me.

@@ -16,4 +16,4 @@ export const font = {
     }
 }
 
-export const aboutMe = "Hi, I'm Anshuman Tiwari — a Full-Stack Developer and AI Enthusiast who loves to learn and explore new areas. I have two years of experience working with great teams, and I'm always excited to take on new challenges. I bring my time, experience, and a commitment to growing my skills to every project I work on, and I always try to make a positive impact on the people I work with and the projects I contribute to :)"
+export const aboutMe = "Hi, I'm Anshuman Tiwari — a Full-Stack Developer and AI Enthusiast who loves to learn and explore new areas. I have a years of experience working with great teams, and I'm always excited to take on new challenges. I bring my time, experience, and a commitment to growing my skills to every project I work on, and I always try to make a positive impact on the people I work with and the projects I contribute to :)"
