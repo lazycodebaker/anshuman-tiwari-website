@@ -1,7 +1,6 @@
 
 "use client"
-
-import { useRouter } from "next/navigation"
+ 
 import { cubicBezier, motion } from "framer-motion"
 import { useState } from "react"
 import { color, font } from "@/constants"
@@ -13,7 +12,6 @@ export default function WorkList({ work, index }: {
 }) {
     const [isHovered, setIsHovered] = useState<boolean>(false)
 
-    const navigate = useRouter()
 
     return (
         <motion.li
