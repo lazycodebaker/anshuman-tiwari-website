@@ -1,24 +1,67 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { montrealMedium } from "./font";
 import { color, font } from "@/constants";
 import Parallax from "@/components/Animation/Parallax";
-// import WorkList from "@/components/Work/List";
 import FlipText from "@/components/Animation/FlipText";
-import { getAllDocsFormatted } from "@/lib/docs";
-import { useRouter } from "next/navigation";
+import WorkList from "@/components/Work/List";
+
+const works: Array<{ index: number, title: string, url: string }> = [
+  {
+    index: 1,
+    title: "Sliding Window Object Detection with OpenCV",
+    url: "https://github.com/lazycodebaker/Sliding-Window-Object-Detection"
+  },
+  {
+    index: 2,
+    title: "Autoencoder-based Anomaly Detection",
+    url: "https://github.com/lazycodebaker/Video-Anomaly-Detection"
+  },
+  {
+    index: 3,
+    title: "Epipolar Geometry Visualization",
+    url: "https://github.com/lazycodebaker/Epipolar-Geometry-Visualization"
+  },
+  {
+    index: 4,
+    title: "Schizophrenia Classification from EEG",
+    url: "https://github.com/lazycodebaker/Schizophrenia-Classification-from-EEG"
+  },
+  {
+    index: 5,
+    title: "File Monitoring and Sorting Utility",
+    url: "https://github.com/lazycodebaker/download-files-monitoring"
+  },
+  {
+    index: 6,
+    title: "Blockchain Based MCLUB ERC Token",
+    url: "https://github.com/lazycodebaker/mclub"
+  },
+  {
+    index: 7,
+    title: "DAPP Voting System",
+    url: "https://github.com/lazycodebaker/Voting-System-DAPP"
+  },
+  {
+    index: 8,
+    title: "Gnome Title Bar Reduce CSS",
+    url: "https://github.com/lazycodebaker/Gnome-TItle-Bar-Size-Reduce"
+  }
+];
 
 export default function Home() {
+  /*
   const [, setWorks] = useState<Array<{
     title: string;
     slug: string;
     desc: string;
     date: string;
   }>>([]);
+  */
 
-  const [, setIsLoading] = useState(true);
+  //  const [isLoading, setIsLoading] = useState(true);
 
+  /*
   useEffect(() => {
     async function fetchWorks() {
       try {
@@ -32,8 +75,7 @@ export default function Home() {
     }
     fetchWorks();
   }, []);
-
-  const router = useRouter();
+  */
 
   return (
     <main
@@ -47,43 +89,21 @@ export default function Home() {
           <div
             style={{
               color: color.BLACK,
-              fontSize: font.size.MD,
+              fontSize: font.size.XL,
             }}
             className={`uppercase ${montrealMedium.className}`}
-          >
-            <h1 className="">
-              Please head to
-              <span onClick={() => {
-                router.push("/info");
-              }} className="cursor-pointer font-semibold inline-block mx-2">
-                <FlipText> /info </FlipText>
-              </span>
-              <br /> <br />
-              I&apos;m Working for this main page.
-            </h1>
-
-            <h1 className="">
-              or Please head to
-              <span onClick={() => {
-                router.replace("https://github.com/lazycodebaker");
-              }} className="cursor-pointer font-semibold inline-block mx-2">
-                <FlipText> Github </FlipText>
-              </span>
-              for my Github account.
-              <br /> <br />
-            </h1>
-            {/* <FlipText>WORKS</FlipText> */}
+          > <FlipText>WORKS</FlipText>
           </div>
-          {/* <div
+          <div
             style={{
               backgroundColor: color.BLACK,
             }}
             className="w-full mt-2 h-[1.5px] relative"
-          /> */}
+          />
         </section>
       </Parallax>
 
-      {/* <Parallax
+      <Parallax
         style={{
           backgroundColor: color.WHITE,
         }}
@@ -92,6 +112,14 @@ export default function Home() {
         key={"info"}
         className="min-h-screen"
       >
+
+        <ul className="w-full">
+          {works.map((work, index) => (
+            <WorkList key={index} work={work} index={index} />
+          ))}
+        </ul>
+
+        {/*
         <div className="flex justify-center items-center w-full h-full">
           <div
             style={{
@@ -99,7 +127,7 @@ export default function Home() {
             }}
             className="w-full"
           >
-            {isLoading ? (
+             isLoading ? (
               <div className="flex justify-center items-center h-full">
                 <div className="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full border-gray-300 border-t-gray-800"></div>
               </div>
@@ -108,15 +136,11 @@ export default function Home() {
                 No works available.
               </div>
             ) : (
-              <ul className="w-full">
-                {works.map((work, index) => (
-                  <WorkList key={index} work={work} index={index} />
-                ))}
-              </ul>
-            )}
+
           </div>
         </div>
-      </Parallax> */}
+              */}
+      </Parallax>
     </main>
   );
 }

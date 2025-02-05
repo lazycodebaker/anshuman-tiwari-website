@@ -8,7 +8,7 @@ import { color, font } from "@/constants"
 import { MdArrowOutward } from "react-icons/md"
 
 export default function WorkList({ work, index }: {
-    work: { date: string, title: string, desc: string },
+    work: { title: string, url: string, index: number },
     index: number,
 }) {
     const [isHovered, setIsHovered] = useState<boolean>(false)
@@ -18,7 +18,7 @@ export default function WorkList({ work, index }: {
     return (
         <motion.li
             key={index}
-            onClick={() => navigate.push(`/work/${work?.title}`)}
+            onClick={() => window.open(work?.url, '_blank')}
             style={{
                 borderColor: color.BLACK,
                 backgroundColor: isHovered ? 'white' : 'transparent',
@@ -32,14 +32,14 @@ export default function WorkList({ work, index }: {
             className="flex justify-start p-2 items-center cursor-pointer w-full h-full border-b bottom-1"
         >
             <div className="flex items-center h-full w-full gap-4">
-                <h2
+                <p
                     style={{
-                        fontSize: font.size.XS,
+                        color: color.BLACK,
+                        fontSize: font.size.MD,
                     }}
-                    className="tracking-widest text-gray-600"
                 >
-                    {work.date}
-                </h2>
+                    {work.index}.
+                </p>
                 <p
                     style={{
                         color: color.BLACK,
