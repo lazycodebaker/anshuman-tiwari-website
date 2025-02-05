@@ -11,7 +11,7 @@ export default function WorkList({ work, index }: {
     index: number,
 }) {
     const [isHovered, setIsHovered] = useState<boolean>(false)
-
+//
 
     return (
         <motion.li
