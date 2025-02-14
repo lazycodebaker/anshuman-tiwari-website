@@ -24,7 +24,7 @@ const works: Array<{ index: number, title: string, url: string }> = [
   },
   {
     index:4,
-    tittle :"MNIST GAN in C++",
+    title :"MNIST GAN in C++",
     url : "https://github.com/lazycodebaker/GAN-CPP"
   },
   {
