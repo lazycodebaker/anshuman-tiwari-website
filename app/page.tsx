@@ -23,27 +23,32 @@ const works: Array<{ index: number, title: string, url: string }> = [
     url: "https://github.com/lazycodebaker/Epipolar-Geometry-Visualization"
   },
   {
-    index: 4,
+    index:4,
+    tittle :"MNIST GAN in C++",
+    url : "https://github.com/lazycodebaker/GAN-CPP"
+  },
+  {
+    index: 5,
     title: "Schizophrenia Classification from EEG",
     url: "https://github.com/lazycodebaker/Schizophrenia-Classification-from-EEG"
   },
   {
-    index: 5,
+    index: 6,
     title: "File Monitoring and Sorting Utility",
     url: "https://github.com/lazycodebaker/download-files-monitoring"
   },
   {
-    index: 6,
+    index: 7,
     title: "Blockchain Based MCLUB ERC Token",
     url: "https://github.com/lazycodebaker/mclub"
   },
   {
-    index: 7,
+    index: 8,
     title: "DAPP Voting System",
     url: "https://github.com/lazycodebaker/Voting-System-DAPP"
   },
   {
-    index: 8,
+    index: 9,
     title: "Gnome Title Bar Reduce CSS",
     url: "https://github.com/lazycodebaker/Gnome-TItle-Bar-Size-Reduce"
   }
