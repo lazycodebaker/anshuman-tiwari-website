@@ -34,11 +34,16 @@ const works: Array<{ index: number, title: string, url: string }> = [
   },
   {
     index: 6,
+    title: "Kinematics Visualise SFML C++",
+    url: "https://github.com/lazycodebaker/Forward-Kinematics"
+  },
+  {
+    index: 7,
     title: "File Monitoring and Sorting Utility",
     url: "https://github.com/lazycodebaker/download-files-monitoring"
   },
   {
-    index: 7,
+    index: 8,
     title: "Blockchain Based MCLUB ERC Token",
     url: "https://github.com/lazycodebaker/mclub"
   },
@@ -48,7 +53,7 @@ const works: Array<{ index: number, title: string, url: string }> = [
     url: "https://github.com/lazycodebaker/Voting-System-DAPP"
   },
   {
-    index: 9,
+    index: 10,
     title: "Gnome Title Bar Reduce CSS",
     url: "https://github.com/lazycodebaker/Gnome-TItle-Bar-Size-Reduce"
   }
