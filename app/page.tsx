@@ -14,51 +14,56 @@ const works: Array<{ index: number, title: string, url: string }> = [
   },
   {
     index: 2,
+    title: "Image Captioning ( ONNX C++ )",
+    url: "https://github.com/lazycodebaker/image_captioning"
+  },
+  {
+    index: 3,
     title: "Autoencoder-based Anomaly Detection",
     url: "https://github.com/lazycodebaker/Video-Anomaly-Detection"
   },
   {
-    index: 3,
+    index: 4,
     title: "Epipolar Geometry Visualization",
     url: "https://github.com/lazycodebaker/Epipolar-Geometry-Visualization"
   },
   {
-    index: 4,
+    index: 5,
     title: "MNIST GAN in C++",
     url: "https://github.com/lazycodebaker/GAN-CPP"
   },
   {
-    index: 5,
+    index: 6,
     title: "Schizophrenia Classification from EEG",
     url: "https://github.com/lazycodebaker/Schizophrenia-Classification-from-EEG"
   },
   {
-    index: 6,
+    index: 7,
     title: "Kinematics Visualise SFML C++",
     url: "https://github.com/lazycodebaker/Forward-Kinematics"
   },
   {
-    index: 7,
+    index: 8,
     title: "File Monitoring and Sorting Utility",
     url: "https://github.com/lazycodebaker/download-files-monitoring"
   },
   {
-    index : 8,
+    index: 9,
     title: "Blockchain Based MCLUB ERC Token",
     url: "https://github.com/lazycodebaker/mclub"
   },
   {
-    index: 9,
+    index: 10,
     title: "Tracking ROI using Opencv in C++",
     url: "https://github.com/lazycodebaker/Tracking-ROI"
   },
   {
-    index: 10,
+    index: 11,
     title: "DAPP Voting System",
     url: "https://github.com/lazycodebaker/Voting-System-DAPP"
   },
   {
-    index: 11,
+    index: 12,
     title: "Gnome Title Bar Reduce CSS",
     url: "https://github.com/lazycodebaker/Gnome-TItle-Bar-Size-Reduce"
   }
